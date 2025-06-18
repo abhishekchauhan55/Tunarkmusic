@@ -24,6 +24,12 @@ nav a:hover {
   text-decoration: underline;
 }
 
+nav a:active{
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  transition: 0.1s ease-in;
+}
+
 .intro, .about {
   padding: 30px;
 }
