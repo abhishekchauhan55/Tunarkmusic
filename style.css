@@ -42,9 +42,18 @@ nav a:hover {
 
 .video-card img {
   width: 100%;
-  height:100%;
+  height: auto; /* ✅ Correct */
   border-radius: 10px;
+  display: block;
+  object-fit: cover; /* Optional: crop slightly but keeps quality */
+  max-height: 200px; /* Optional limit if needed */
 }
+
+.video-card img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
 .video-card a {
   display: block;
   margin-top: 10px;
@@ -64,9 +73,6 @@ h1{
 }
 
 .abhishek {
-  width: 100%;
-  max-height: 200px;
-  object-fit: cover;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   border-radius: 12px;
   transition: transform 0.3s ease;
