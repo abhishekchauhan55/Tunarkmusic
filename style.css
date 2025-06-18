@@ -56,8 +56,13 @@ footer {
   border-top: 1px solid crimson;
 }
 /* Horror Font Default Apply */
-h1, h2 {
+h1{
   font-family: 'Creepster', cursive;
+  letter-spacing: 2px;
+}
+
+h2{
+  letter-spacing: 1px;
 }
 
 .abhishek{
