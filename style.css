@@ -63,10 +63,16 @@ h1{
   font-family: 'Creepster', cursive;
 }
 
-.abhishek{
-  height:100px;
+.abhishek {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+.abhishek:hover {
+  transform: scale(1.05);
 }
 
 /* Foggy Background Animation */
