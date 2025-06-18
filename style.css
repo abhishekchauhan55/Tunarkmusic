@@ -41,13 +41,14 @@ nav a:hover {
 }
 
 .video-card img {
-  width: 100%;
-  height: auto; /* ✅ Correct */
+  width: auto;
+  height: auto;
+  max-width: 100%;
   border-radius: 10px;
   display: block;
-  object-fit: cover; /* Optional: crop slightly but keeps quality */
-  max-height: 200px; /* Optional limit if needed */
+  margin: 0 auto;
 }
+
 
 .video-card img:hover {
   transform: scale(1.05);
