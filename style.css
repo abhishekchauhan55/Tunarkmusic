@@ -82,6 +82,11 @@ h1{
   transform: scale(1.05);
 }
 
+.audio{
+width: 260px;
+height:46px;
+}
+
 /* Foggy Background Animation */
 body::before {
   content: "";
