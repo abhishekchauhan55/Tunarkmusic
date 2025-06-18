@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0d0d0d;
+  color: #f2f2f2;
+  text-align: center;
+}
+
+header {
+  background-color: #111;
+  padding: 20px;
+  border-bottom: 2px solid crimson;
+}
+header h1 {
+  margin: 0;
+  color: crimson;
+}
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+.intro, .about {
+  padding: 30px;
+}
+
+.videos {
+  padding: 20px;
+}
+.video-card {
+  background-color: #1a1a1a;
+  margin: 15px auto;
+  width: 320px;
+  border-radius: 10px;
+  padding: 10px;
+}
+.video-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+.video-card a {
+  display: block;
+  margin-top: 10px;
+  color: crimson;
+  text-decoration: none;
+}
+
+footer {
+  background-color: #111;
+  padding: 10px;
+  font-size: 14px;
+  border-top: 1px solid crimson;
+}
