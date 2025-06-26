@@ -51,5 +51,78 @@
   <footer>
     <p>&copy; 2025 Horror Vibes. All rights reserved.</p>
   </footer>
+  <script>
+    const cards = document.querySelectorAll('.music-card');
+    let currentAudio = null;
+    let currentBtn = null;
+    let currentProgress = null;
+    let currentWave = null;
+    let waveInterval = null;
+
+    function formatTime(seconds) {
+      const mins = Math.floor(seconds / 60);
+      const secs = Math.floor(seconds % 60).toString().padStart(2, '0');
+      return `${mins}:${secs}`;
+    }
+
+    cards.forEach(card => {
+      const btn = card.querySelector('.play-btn');
+      const audio = card.querySelector('audio');
+      const wave = card.querySelector('.wave');
+      const progressBar = card.querySelector('.progress');
+      const time = card.querySelector('.remaining-time');
+
+      wave.addEventListener('click', (e) => {
+        const rect = wave.getBoundingClientRect();
+        const offsetX = e.clientX - rect.left;
+        const percent = offsetX / wave.offsetWidth;
+        audio.currentTime = percent * audio.duration;
+      });
+
+      btn.addEventListener('click', () => {
+        if (currentAudio && currentAudio !== audio) {
+          currentAudio.pause();
+          currentAudio.currentTime = 0;
+          currentBtn.textContent = '▶';
+          currentBtn.classList.remove('playing');
+          currentWave.classList.remove('playing');
+          clearInterval(waveInterval);
+          currentProgress.style.width = '0%';
+        }
+
+        if (audio.paused) {
+          audio.play();
+          btn.textContent = '⏸';
+          btn.classList.add('playing');
+          wave.classList.add('playing');
+          currentAudio = audio;
+          currentBtn = btn;
+          currentProgress = progressBar;
+          currentWave = wave;
+
+          waveInterval = setInterval(() => {
+            const percent = (audio.currentTime / audio.duration) * 100;
+            progressBar.style.width = `${percent}%`;
+            time.textContent = formatTime(audio.duration - audio.currentTime);
+          }, 300);
+        } else {
+          audio.pause();
+          btn.textContent = '▶';
+          btn.classList.remove('playing');
+          wave.classList.remove('playing');
+          clearInterval(waveInterval);
+        }
+      });
+
+      audio.addEventListener('ended', () => {
+        btn.textContent = '▶';
+        btn.classList.remove('playing');
+        wave.classList.remove('playing');
+        clearInterval(waveInterval);
+        progressBar.style.width = '0%';
+        time.textContent = formatTime(audio.duration);
+      });
+    });
+  </script>
 </body>
 </html>
