@@ -136,7 +136,7 @@ footer {
       right: 0;
       height: 16px;
       width: 16px;
-      background-color: #00bfa5;
+      background: linear-gradient(120deg, #ff4e50, #1e90ff);
       border-radius: 50%;
       opacity: 0;
       transition: opacity 0.2s;
