@@ -96,7 +96,7 @@ footer {
     .song-name {
       font-weight: bold;
       font-size: 16px;
-       color: #000000;
+      color: #f5f5f5;
     }
 
     .artist-name {
@@ -163,7 +163,7 @@ footer {
 
     .tag-title {
       font-weight: bold;
-      color:rgb(1, 109, 131);
+      color: #f5f5f5;
     }
 
     .tag-sub {
