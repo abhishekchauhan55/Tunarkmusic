@@ -9,6 +9,7 @@ body {
 header {
   background-color: #111;
   padding: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   border-bottom: 2px solid crimson;
 }
 header h1 {
