@@ -40,10 +40,6 @@ footer {
   font-size: 14px;
   border-top: 1px solid crimson;
 }
-/* Horror Font Default Apply */
-h1{
-  font-family: 'Creepster', cursive;
-}
 
 /* Foggy Background Animation */
 body::before {
