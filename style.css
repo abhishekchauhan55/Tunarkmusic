@@ -24,6 +24,20 @@ h1{
   animation: gradientMove 6s ease infinite;
   margin: 2rem 0;
 }
+/* effect */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
 nav a {
   color: white;
   margin: 0 10px;
