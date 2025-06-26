@@ -45,25 +45,6 @@ h1{
   font-family: 'Creepster', cursive;
 }
 
-h3{
-  height:40px;
-  color:green;
-}
-
-.abhishek {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  border-radius: 12px;
-  transition: transform 0.3s ease;
-}
-.abhishek:hover {
-  transform: scale(1.05);
-}
-
-.audio{
-width: 260px;
-height:46px;
-}
-
 /* Foggy Background Animation */
 body::before {
   content: "";
@@ -213,10 +194,10 @@ body {
 
     .download-btn:hover {
       color: #007bff;
-      background-color: #0d0d0d;
-      padding: 4px;
+      background: linear-gradient(135deg, #1e00ff, #ffffff, rgb(255, 0, 153));
+      padding: 10px;
       transition: 0.3s all ease;
-      border-radius: 4px;
+      border-radius: 10px;
     }
 
     .play-btn {
