@@ -50,7 +50,7 @@ body::before {
   height: 100%;
 
   /* Thoda fog chahiye to background line on rahe: */
-  background: url('https://i.ibb.co/7Xq6YGJ/fog.gif') center/cover no-repeat;
+/*   background: url('https://i.ibb.co/7Xq6YGJ/fog.gif') center/cover no-repeat; */
 
   /* Opacity ko thoda aur kam karo — 0.03 ya 0.02 perfect rahega */
   opacity: 0.03;
