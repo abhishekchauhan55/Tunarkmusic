@@ -40,34 +40,6 @@ footer {
   border-top: 1px solid crimson;
 }
 
-/* Foggy Background Animation */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-  /* Thoda fog chahiye to background line on rahe: */
-/*   background: url('https://i.ibb.co/7Xq6YGJ/fog.gif') center/cover no-repeat; */
-
-  /* Opacity ko thoda aur kam karo — 0.03 ya 0.02 perfect rahega */
-  opacity: 0.03;
-
-  z-index: -1;
-  pointer-events: none;
-}
-
-
-/* Fade In Animation */
-body {
-  animation: fadeIn 2s ease-in;
-}
-@keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
 
 .music-list {
       display: flex;
