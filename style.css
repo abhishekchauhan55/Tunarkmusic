@@ -129,6 +129,7 @@ body {
     .song-name {
       font-weight: bold;
       font-size: 16px;
+       color: #000000;
     }
 
     .artist-name {
@@ -195,6 +196,7 @@ body {
 
     .tag-title {
       font-weight: bold;
+      color:rgb(1, 109, 131);
     }
 
     .tag-sub {
@@ -206,13 +208,14 @@ body {
       font-size: 18px;
       text-decoration: none;
       color: #333;
-      transition: color 0.3s ease;
+      transition: 0.3s all ease;
     }
 
     .download-btn:hover {
       color: #007bff;
       background-color: #0d0d0d;
       padding: 4px;
+      transition: 0.3s all ease;
       border-radius: 4px;
     }
 
