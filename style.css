@@ -224,72 +224,93 @@ footer {
     }
 
 /* hamburger-----------setting  and responsive in phone.🤝 */
-
-.menu-toggle {
-  display: block !important; 
-  margin-left: auto;      /* yeh push karega hamburger ko right side pe */
-  margin-right: 1rem;     /* thodi gap edge se */
-  position: relative;     /* ensure positioning inside nav */
-}
-
-.menu-toggle span {
-  background: #333;
-  position: absolute;
-  height: 3px;
-  width: 100%;
-  left: 0;
-  transition: 0.4s;
-  border-radius: 2px;
-}
-.menu-toggle span:nth-child(1) { top: 0; }
-.menu-toggle span:nth-child(2) { top: 9px; }
-.menu-toggle span:nth-child(3) { bottom: 0; }
-
-.menu-toggle.active span:nth-child(1) {
-  transform: rotate(45deg); top: 10px;
-}
-.menu-toggle.active span:nth-child(2) {
-  opacity: 0;
-}
-.menu-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg); bottom: 10px;
-}
-
-.nav-links {
-  display: flex;
-  gap: 1rem;
-}
-
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  nav { 
+nav {
     display: flex;
     align-items: center;
-  }
-
-
-  .nav-links a {
-    padding: 0.5rem 0;
+    justify-content: space-between;
+    position: relative;
   }
 
   .nav-links {
-  display: none;
-  position: absolute;
-  top: 60px; /* adjust if header height alag hai */
-  right: 0;
-  background: #ffffff;
-  flex-direction: column;
-  align-items: flex-end;
-  padding: 1rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  z-index: 999;
-}
-.nav-links.active {
-  display: flex;
-}
+    display: flex;
+    gap: 1rem;
+  }
+
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    height: 22px;
+    width: 30px;
+    position: relative;
+    z-index: 1000;
+    margin-left: auto;
+    margin-right: 1rem;
+  }
+
+  .menu-toggle span {
+    background: #fff;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    left: 0;
+    transition: 0.4s;
+    border-radius: 2px;
+  }
+  .menu-toggle span:nth-child(1) { top: 0; }
+  .menu-toggle span:nth-child(2) { top: 9px; }
+  .menu-toggle span:nth-child(3) { bottom: 0; }
+
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 10px;
+  }
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    bottom: 10px;
+  }
+
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .nav-links {
+      display: none;
+      width: 100%;
+      background: #111;
+      flex-direction: column;
+      padding: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .nav-links a {
+      width: 100%;
+      text-align: right;
+      padding: 0.5rem 0;
+      color: white;
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+
+    .menu-toggle {
+      display: flex;
+    }
+
+/*   =-------  web music responsive---------  */
+
+    
+  }
+
+
 
   
-}
+   
+
